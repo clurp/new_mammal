@@ -7,6 +7,7 @@ mean_mass <- function (masses)
 
 all_of_it <- function ()
 {
+    browser()
     all_data <- read.table("MOMv3.3.txt", sep ="\t", 
                            col.names=c("continent", "status", "order", "family","genus", "species", "log10mass", "mass", "ref"), na.strings = "-999", stringsAsFactors = FALSE)
     
@@ -45,3 +46,4 @@ good$avg_extinct_mass <- as.numeric(as.character(good$avg_extinct_mass))
 good$avg_extant_mass <- as.numeric(as.character(good$avg_extant_mass))
 
 write.csv(good, "good.csv", row.names = FALSE)
+

@@ -1,7 +1,6 @@
 source("../mammal_data_process.R")
 library(testthat)
 
-setwd("../")
 test_that("Table produced", expect_equal(dim(all_of_it())[1], 7))
 test_that("Length 1 vector", {
   expect_length(mean_mass(4), 1)
